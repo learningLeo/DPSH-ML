@@ -12,3 +12,16 @@ DPSH论文的复现：包含 PyTorch 中 DPSH（深度成对监督哈希）的�
 - GPU版本的Pytorch
 
 ## 代码文件解释
+1. **network.py**:我们定义了加载了 CNNF 的预训练网络，定义 CNNF 网络的结构，并且定义了前向传播函数。同时，我们还定义了用于优化检索效果的网络ResNet。
+2. **2.	tools.py**: 我们定义了处理参数、加载数据集、处理数据集、计算结果、评估性能、验证与保存模型的功能，以供 DPSH.py 训练模型使用
+3. **DPSH.py(4 个)**: 4 个 Python 文件，对应 CIFAR 数据集和 NUSWIDE 数据集分别在 2 个不同网络（CNN-F,ResNet）上的训练。只需直接运行即可开始训练模型（如有需要，请自行调整路径）。
+4. **DPSH_test_generate.py**: 用于进行测试与生成 CIFAR 的训练集、测试集、数据库集。如果能够成功运行此代码，代表能够直接运行上述 4 个 DPSH.py 文件进行训练，并且成功生成了用于 CIFAR 的数据集。
+5. **precision_recall_curve.py**: 根据生成的 log（位于 log 文件夹中），我们可以生成 Precision-Recall (PR) 曲线。
+6. **loss_mAP_curve.ipynb**： 根据生成的LOSS.txt和mAP.txt（位于RecordTrain文件夹中），生成训练过程的损失曲线和验证的mAP曲线。
+7. **demo_NUSWIDE.ipynb**: 指定好路径，可以展示某个基于 NUSWIDE21 数据集训练的模型的部分检索结果，作为演示示例。
+8.	**demo_CIFAR.ipynb**: 指定好路径，可以展示某个基于 NUSWIDE21 数据集训练的模型的部分检索结果，作为演示示例。（因为 CIFAR 与 NUSWIDE21 读取数据集的方法不同，所以有两个 demo）
+
+
+
+
+

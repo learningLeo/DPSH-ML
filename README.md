@@ -28,6 +28,10 @@ DPSH论文的复现：包含 PyTorch 中 DPSH（深度成对监督哈希）的�
 3.	在DPSH下创建文件夹datasets，在该文件夹中继续创建两个子文件夹，分别命名为cifar和nus-wide。下载NUSWIDE数据集，解压放入nus-wide文件夹中。
 4.	您需要在DPSH.py以及tools.py中修改符合您运行环境的路径。
 
+## demo
+您可以在两个demo.ipynb中指定路径并运行，来生成图像检索的示例查看模型的效果，如demo里的两个png。
+![Example Image](demo/demo_NUSWIDE.png)
+
 
 ## 运行
 
@@ -35,14 +39,11 @@ DPSH论文的复现：包含 PyTorch 中 DPSH（深度成对监督哈希）的�
 ```sh
 python DPSH_test_generate.py
 
-如果成功，则可以继续进行训练run：
+如果成功，则可以进行正式的训练，run：
 
 python DPSH_CNNF_CIFAR.py
 python DPSH_CNNF_NUSWIDE21.py
 python DPSH_ResNet_CIFAR.py
 python DPSH_ResNet_NUSWIDE21.py
 
-## demo
-您可以在两个demo.ipynb中指定路径并运行，来生成图像检索的示例查看模型的效果，如demo里的两个png。
-![Example Image](demo/demo_NUSWIDE.png)
 

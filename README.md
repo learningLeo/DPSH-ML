@@ -22,6 +22,27 @@ DPSH论文的复现：包含 PyTorch 中 DPSH（深度成对监督哈希）的�
 8.	**demo_CIFAR.ipynb**: 指定好路径，可以展示某个基于 NUSWIDE21 数据集训练的模型的部分检索结果，作为演示示例。（因为 CIFAR 与 NUSWIDE21 读取数据集的方法不同，所以有两个 demo）
 
 
+## 运行准备
+1.	在DPSH下创建三个文件夹, 分别为log、RecordTrain、Save, 分别在这三个文件夹中创建两个文件夹，分别命名为ResNet和CNNF。这将分别对应用来保存log日志文件，loss和mAP记录文件，模型及其二进制哈希码表示。
+2.	在DPSH下创建一个文件夹，命名为CNNFmodel，根据链接（http://www.vlfeat.org/matconvnet/models/imagenet-vgg-f.mat）下载预训练模型，将该预训练模型放入其中。
+3.	在DPSH下创建文件夹datasets，在该文件夹中继续创建两个子文件夹，分别命名为cifar和nus-wide。下载NUSWIDE数据集，解压放入nus-wide文件夹中。
+4.	您需要在DPSH.py以及tools.py中修改符合您运行环境的路径。
 
+
+## 运行
+
+生成用于CIFAR训练的train.txt以及test.txt以及database.txt并测试是否可以成功进行训练, run:
+```sh
+python DPSH_test_generate.py
+
+如果成功，run：
+```sh
+python DPSH_CNNF_CIFAR.py
+python DPSH_CNNF_NUSWIDE21.py
+python DPSH_ResNet_CIFAR.py
+python DPSH_ResNet_NUSWIDE21.py
+
+## demo
+您可以在两个demo.ipynb中指定路径并运行，来生成图像检索的示例查看模型的效果，如demo里的两个png。
 
 

@@ -35,8 +35,8 @@ DPSH论文的复现：包含 PyTorch 中 DPSH（深度成对监督哈希）的�
 ```sh
 python DPSH_test_generate.py
 
-如果成功，run：
-```sh
+如果成功，则可以继续进行训练run：
+
 python DPSH_CNNF_CIFAR.py
 python DPSH_CNNF_NUSWIDE21.py
 python DPSH_ResNet_CIFAR.py

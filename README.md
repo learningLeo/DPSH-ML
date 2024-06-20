@@ -44,5 +44,5 @@ python DPSH_ResNet_NUSWIDE21.py
 
 ## demo
 您可以在两个demo.ipynb中指定路径并运行，来生成图像检索的示例查看模型的效果，如demo里的两个png。
-
+![Example Image](demo/demo_NUSWIDE.png)
 
